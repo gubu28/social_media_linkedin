@@ -1,0 +1,22 @@
+.app {
+  background-color: var(--gubu-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__body {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .app__body {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+  --gubu-bg: #f3f2ef;
+  --gubu-white: #ffffff;
+  --gubu-black: #000000;
+  --gubu-gray: #666666;
+  --gubu-border: #e0e0e0;
+  --gubu-primary: #0a66c2;
+  --gubu-hover: #f3f3f3;
+  --gubu-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gubu-bg);
+  font-family: var(--font-main);
+  color: var(--gubu-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
