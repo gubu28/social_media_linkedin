@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Notifications.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectNotifications, clearUnread } from '../features/notificationSlice';
-import { Bell, ThumbsUp, MessageCircle, Share2, User } from 'lucide-react';
+import { Bell, ThumbsUp, MessageCircle, Share2, User, Trash2 } from 'lucide-react';
 
 function Notifications() {
     const notifications = useSelector(selectNotifications);
@@ -18,6 +18,7 @@ function Notifications() {
             case 'like': return <ThumbsUp size={20} color="#0a66c2" />;
             case 'comment': return <MessageCircle size={20} color="#057642" />;
             case 'share': return <Share2 size={20} color="#915907" />;
+            case 'delete': return <Trash2 size={20} color="#cc1016" />;
             default: return <Bell size={20} color="gray" />;
         }
     };
