@@ -102,6 +102,12 @@ function Feed() {
         window.location.reload();
     };
 
+    const handleDelete = (id) => {
+        const updatedPosts = posts.filter(post => post.id !== id);
+        setPosts(updatedPosts);
+        localStorage.setItem('gubu_posts', JSON.stringify(updatedPosts));
+    };
+
     const handleMediaClick = (type) => {
         const url = prompt(`Enter ${type} URL:`);
         if (url) {
@@ -145,11 +151,13 @@ function Feed() {
             {posts.map(({ id, name, description, message, photoUrl }) => (
                 <Post
                     key={id}
+                    id={id}
                     name={name}
                     description={description}
                     message={message}
                     photoUrl={photoUrl}
                     onShare={() => handleShare({ id, name, message, photoUrl })}
+                    onDelete={() => handleDelete(id)}
                 />
             ))}
         </div>

@@ -24,6 +24,7 @@ function Toast() {
             case 'like': return <ThumbsUp size={18} />;
             case 'comment': return <MessageCircle size={18} />;
             case 'share': return <Share2 size={18} />;
+            case 'delete': return <Trash2 size={18} />;
             default: return <Info size={18} />;
         }
     };

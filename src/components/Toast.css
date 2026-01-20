@@ -55,6 +55,10 @@
     background-color: #915907;
 }
 
+.toast--delete {
+    background-color: #cc1016;
+}
+
 .toast--default {
     background-color: #333;
 }

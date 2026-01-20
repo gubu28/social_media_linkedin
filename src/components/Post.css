@@ -29,6 +29,22 @@
     color: gray;
 }
 
+.post__delete {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post__delete:hover {
+    background-color: whitesmoke;
+    color: #cc1016;
+}
+
 .post__body {
     overflow-wrap: anywhere;
 }

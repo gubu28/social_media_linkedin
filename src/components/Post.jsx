@@ -1,12 +1,12 @@
 import React, { forwardRef, useState } from 'react';
 import './Post.css';
-import { User, ThumbsUp, MessageCircle, Share2, Send } from 'lucide-react';
+import { User, ThumbsUp, MessageCircle, Share2, Send, Trash2 } from 'lucide-react';
 import InputOption from './InputOption';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNotification, showToast } from '../features/notificationSlice';
 import { selectUser } from '../features/userSlice';
 
-const Post = forwardRef(({ name, description, message, photoUrl, onShare }, ref) => {
+const Post = forwardRef(({ id, name, description, message, photoUrl, onShare, onDelete }, ref) => {
     const [liked, setLiked] = useState(false);
     const [showComments, setShowComments] = useState(false);
     const [commentInput, setCommentInput] = useState('');
@@ -32,6 +32,10 @@ const Post = forwardRef(({ name, description, message, photoUrl, onShare }, ref)
             case 'share':
                 action = "shared your post";
                 if (onShare) onShare();
+                break;
+            case 'delete':
+                action = "deleted a post";
+                if (onDelete) onDelete();
                 break;
             default: return;
         }
@@ -111,6 +115,9 @@ const Post = forwardRef(({ name, description, message, photoUrl, onShare }, ref)
                 <div className="post__info">
                     <h2>{name}</h2>
                     <p>{description}</p>
+                </div>
+                <div className="post__delete" onClick={(e) => handleAction(e, 'delete')}>
+                    <Trash2 size={20} color="gray" />
                 </div>
             </div>
 
