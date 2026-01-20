@@ -13,7 +13,7 @@ import Profile from './pages/Profile';
 import Placement from './pages/Placement';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   const user = useSelector(selectUser);
