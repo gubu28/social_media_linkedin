@@ -1,0 +1,72 @@
+.notifications {
+    flex: 0.6;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    margin: 20px;
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.notifications__header {
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.notifications__header h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.notification__item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.notification__item:hover {
+    background-color: whitesmoke;
+}
+
+.notification__icon {
+    margin-right: 15px;
+}
+
+.notification__content {
+    display: flex;
+    align-items: center;
+}
+
+.notification__avatar {
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.notification__text p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.notification__time {
+    font-size: 12px;
+    color: gray;
+}
+
+.notifications__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: gray;
+}
+
+.notifications__empty p {
+    margin-top: 10px;
+}

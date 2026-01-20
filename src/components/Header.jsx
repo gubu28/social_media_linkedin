@@ -3,10 +3,12 @@ import './Header.css';
 import { Search, Home, Users, Briefcase, MessageSquare, Bell, User, LogOut, Gamepad2, GraduationCap } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../features/userSlice';
+import { selectUnreadCount } from '../features/notificationSlice';
 import { Link, NavLink } from 'react-router-dom';
 
 function Header() {
     const user = useSelector(selectUser);
+    const unreadCount = useSelector(selectUnreadCount);
     const dispatch = useDispatch();
 
     const logoutOfApp = () => {
@@ -54,10 +56,13 @@ function Header() {
                             <GraduationCap size={24} />
                             <span>Placement</span>
                         </NavLink>
-                        <div className="headerOption">
-                            <Bell size={24} />
+                        <NavLink to="/notifications" className={({ isActive }) => isActive ? "headerOption headerOption--active" : "headerOption"}>
+                            <div className="headerOption__iconWrapper">
+                                <Bell size={24} />
+                                {unreadCount > 0 && <span className="headerOption__badge">{unreadCount}</span>}
+                            </div>
                             <span>Notifications</span>
-                        </div>
+                        </NavLink>
                         <div className="headerOption" onClick={logoutOfApp}>
                             <div className="header__avatar">
                                 {user?.photoUrl ? <img src={user.photoUrl} alt="" /> : <User size={24} />}

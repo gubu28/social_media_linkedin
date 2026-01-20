@@ -11,6 +11,8 @@ import Messaging from './pages/Messaging';
 import Games from './pages/Games';
 import Profile from './pages/Profile';
 import Placement from './pages/Placement';
+import Notifications from './pages/Notifications';
+import Toast from './components/Toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -38,6 +40,7 @@ function App() {
     <Router>
       <div className="app">
         <Header />
+        <Toast />
 
         {!user ? (
           <Login />
@@ -57,6 +60,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/games" element={<Games />} />
               <Route path="/placement" element={<Placement />} />
+              <Route path="/notifications" element={<Notifications />} />
             </Routes>
           </div>
         )}

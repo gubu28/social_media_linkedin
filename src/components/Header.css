@@ -97,6 +97,30 @@
     object-fit: contain;
 }
 
+.headerOption__iconWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerOption__badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #cc1016;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 5px;
+    min-width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .header__search input {
         display: none;
