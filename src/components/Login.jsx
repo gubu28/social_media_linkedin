@@ -37,9 +37,15 @@ function Login() {
 
     return (
         <div className="login">
+            <div className="login__disclaimer">
+                <h3>⚠️ Educational Demo Project</h3>
+                <p>This is a portfolio project (LinkedIn clone) created for educational purposes. <strong>Do NOT enter real personal information or passwords.</strong></p>
+                <p>Use dummy credentials to test: email: <code>test@demo.com</code> / password: <code>any</code></p>
+            </div>
+
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png"
-                alt="Gubu Space"
+                alt="Portfolio Demo Logo"
             />
 
             <form>
