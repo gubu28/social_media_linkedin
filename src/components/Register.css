@@ -1,0 +1,93 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register img {
+    object-fit: contain;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register form input {
+    width: 350px;
+    height: 50px;
+    font-size: 18px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.register form input:focus {
+    border-color: var(--gubu-primary);
+    border-width: 2px;
+}
+
+.register form button {
+    width: 367px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--gubu-primary);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.register form button:hover {
+    background-color: #004182;
+    transform: translateY(-2px);
+}
+
+.register form button:active {
+    transform: translateY(0);
+}
+
+.register__login {
+    color: var(--gubu-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .register form input {
+        width: 300px;
+    }
+
+    .register form button {
+        width: 317px;
+    }
+}

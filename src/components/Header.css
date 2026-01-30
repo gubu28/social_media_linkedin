@@ -21,8 +21,13 @@
     color: var(--gubu-primary);
     margin-right: 18px;
     font-weight: 800;
-    font-size: 24px;
-    letter-spacing: -0.5px;
+    font-size: 26px;
+    letter-spacing: -1px;
+    transition: transform 0.3s ease;
+}
+
+.header__logo h2:hover {
+    transform: scale(1.05);
 }
 
 .header__logo a {

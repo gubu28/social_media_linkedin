@@ -15,6 +15,7 @@ import Notifications from './pages/Notifications';
 import Toast from './components/Toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import Register from './components/Register';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
@@ -42,28 +43,31 @@ function App() {
         <Header />
         <Toast />
 
-        {!user ? (
-          <Login />
-        ) : (
-          <div className="app__body_wrapper">
-            <Routes>
-              <Route path="/" element={
+        <div className="app__body_wrapper">
+          <Routes>
+            {/* Authenticated Routes */}
+            <Route path="/" element={
+              user ? (
                 <div className="app__body">
                   <Sidebar />
                   <Feed />
                   <Widgets />
                 </div>
-              } />
-              <Route path="/network" element={<Network />} />
-              <Route path="/jobs" element={<Jobs />} />
-              <Route path="/messaging" element={<Messaging />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/games" element={<Games />} />
-              <Route path="/placement" element={<Placement />} />
-              <Route path="/notifications" element={<Notifications />} />
-            </Routes>
-          </div>
-        )}
+              ) : <Navigate to="/login" />
+            } />
+            <Route path="/network" element={user ? <Network /> : <Navigate to="/login" />} />
+            <Route path="/jobs" element={user ? <Jobs /> : <Navigate to="/login" />} />
+            <Route path="/messaging" element={user ? <Messaging /> : <Navigate to="/login" />} />
+            <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
+            <Route path="/games" element={user ? <Games /> : <Navigate to="/login" />} />
+            <Route path="/placement" element={user ? <Placement /> : <Navigate to="/login" />} />
+            <Route path="/notifications" element={user ? <Notifications /> : <Navigate to="/login" />} />
+
+            {/* Public Routes */}
+            <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
+            <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
