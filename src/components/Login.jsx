@@ -23,15 +23,9 @@ function Login() {
 
     return (
         <div className="login">
-            <div className="login__disclaimer">
-                <h3>⚠️ Educational Demo Project</h3>
-                <p>This is a portfolio project for <strong>B@G_LAMS Technologies</strong>. Created for educational purposes only. <strong>Do NOT enter real passwords.</strong></p>
-                <p>Use dummy credentials: email: <code>test@demo.com</code> / password: <code>any</code></p>
-            </div>
-
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png"
-                alt="B@G_LAMS Technologies Logo"
+                alt="B@G-LAMS Technologies Logo"
             />
 
             <form onSubmit={loginToApp}>
@@ -54,7 +48,7 @@ function Login() {
             </form>
 
             <p>
-                New to B@G_LAMS?{" "}
+                New to B@G-LAMS?{" "}
                 <Link to="/register" className="login__register">Join Now</Link>
             </p>
         </div>

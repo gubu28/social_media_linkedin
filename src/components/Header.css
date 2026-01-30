@@ -137,11 +137,6 @@
     }
 
     .header__search {
-        padding: 5px;
-        height: 30px;
-    }
-
-    .header__search input {
         display: none;
     }
 
