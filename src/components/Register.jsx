@@ -31,7 +31,7 @@ function Register() {
         <div className="register">
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1200px-LinkedIn_Logo.svg.png"
-                alt="B@G-LAMS Technologies Logo"
+                alt="B2G-LAMS Technologies Logo"
             />
 
             <form onSubmit={register}>
@@ -67,7 +67,7 @@ function Register() {
             </form>
 
             <p>
-                Already on B@G-LAMS?{" "}
+                Already on B2G-LAMS?{" "}
                 <Link to="/login" className="register__login">Sign In</Link>
             </p>
         </div>
