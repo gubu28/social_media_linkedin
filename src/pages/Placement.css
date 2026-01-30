@@ -16,6 +16,39 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .placement {
+        padding: 0 10px;
+        margin: 10px auto;
+    }
+
+    .placement__header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .placement__table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .placement__pathItem {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .placement__progress {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .placement__section {
     background-color: white;
     border-radius: 10px;

@@ -4,7 +4,30 @@
     margin: 20px auto;
     padding: 0 20px;
     gap: 20px;
-    height: 85vh;
+    height: calc(100vh - 120px);
+}
+
+@media (max-width: 768px) {
+    .messaging {
+        flex-direction: column;
+        height: auto;
+        padding: 0 10px;
+        margin: 10px auto;
+    }
+
+    .messaging__sidebar {
+        flex: none;
+        height: 250px;
+    }
+
+    .messaging__chat {
+        flex: none;
+        height: 450px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
 }
 
 .messaging__sidebar {

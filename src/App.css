@@ -18,5 +18,8 @@
 @media (max-width: 768px) {
   .app__body {
     flex-direction: column;
+    padding: 0 10px;
+    margin: 10px auto;
+    gap: 15px;
   }
 }

@@ -122,15 +122,38 @@
 }
 
 @media (max-width: 768px) {
+    .header__left {
+        margin-left: 10px;
+    }
+
+    .header__logo h2 {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .header__search {
+        padding: 5px;
+        height: 30px;
+    }
+
     .header__search input {
         display: none;
+    }
+
+    .header__right {
+        margin-right: 10px;
+    }
+
+    .headerOption {
+        margin-right: 10px;
+        min-width: unset;
     }
 
     .headerOption span {
         display: none;
     }
 
-    .headerOption {
-        margin-right: 15px;
+    .headerOption--active {
+        border-bottom: 2px solid var(--gubu-primary);
     }
 }
