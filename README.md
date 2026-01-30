@@ -1,4 +1,4 @@
-# Gubu Space - LinkedIn Clone Demo
+# B@G-LAMS Technologies - LinkedIn Clone Demo
 
 > [!IMPORTANT]
 > **DISCLAIMER**: This project is for **educational and portfolio purposes only**. It is a clone of LinkedIn's UI and does not collect, store, or transmit real user data. Do not use real passwords.
