@@ -20,7 +20,7 @@ function Header() {
             <div className="header__left">
                 <div className="header__logo">
                     <Link to="/">
-                        <h2>B@G-LAMS</h2>
+                        <h2>B2G-LAMS</h2>
                     </Link>
                 </div>
                 <div className="header__search">

@@ -48,7 +48,7 @@ function Login() {
             </form>
 
             <p>
-                New to B@G-LAMS?{" "}
+                New to B2G-LAMS?{" "}
                 <Link to="/register" className="login__register">Join Now</Link>
             </p>
         </div>
