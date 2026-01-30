@@ -28,6 +28,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s ease;
 }
 
 ul {
@@ -39,4 +40,28 @@ button {
   border: none;
   background: none;
   font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app,
+.login,
+.register,
+.feed,
+.messaging,
+.network,
+.placement,
+.profile {
+  animation: fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
